@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15758" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:44 BDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15758" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:44 BDT">
+      <class name="com.bitm.SeleniumMaven.Test.LoginTest">
+        <test-method status="PASS" signature="checkloginpagetitle()[pri:1, instance:com.bitm.SeleniumMaven.Test.LoginTest@2758fe70]" name="checkloginpagetitle" duration-ms="9042" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:38 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkloginpagetitle -->
+        <test-method status="PASS" signature="logintest(java.util.List)[pri:0, instance:com.bitm.SeleniumMaven.Test.LoginTest@2758fe70]" name="logintest" duration-ms="5348" started-at="2020-03-07T02:03:39 BDT" data-provider="loginData" depends-on-methods="com.bitm.SeleniumMaven.Test.LoginTest.checkloginpagetitle" finished-at="2020-03-07T02:03:44 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[LoginDTO [username=tutorial, password=tutorial]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+      </class> <!-- com.bitm.SeleniumMaven.Test.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

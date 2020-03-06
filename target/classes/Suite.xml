@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="SeleniumMavenSuite" >
+
+  <test name="Login Test" >
+    <classes>
+       <class name="com.bitm.SeleniumMaven.Test.LoginTest" />
+       <class name="com.bitm.SeleniumMaven.Test.FlightFinderTest" />
+       <class name="com.bitm.SeleniumMaven.Test.FlightSelectionTest" />
+       <class name="com.bitm.SeleniumMaven.Test.FlightBookingTest" />
+    </classes>
+  </test>
+ 
+ 
+</suite>
