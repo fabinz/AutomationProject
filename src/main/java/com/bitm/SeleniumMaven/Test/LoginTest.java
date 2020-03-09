@@ -21,9 +21,9 @@ import com.bitm.SeleniumMaven.Utils.XPathUtils;
 public class LoginTest {
 	private WebDriver driver = null ;
 	
-	@Test (priority=1)
-
-	 public void checkloginpagetitle()
+	
+	@Test
+    public void checkloginpagetitle()
 	{
 	   driver = DriverManager.driver; 
 	   driver.get(UrlTextUtils.URL.BASE_URL);

@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" ignored="0" total="8" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15758" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:44 BDT">
+  <suite name="SeleniumMavenSuite" duration-ms="20885" started-at="2020-03-07T18:00:40 BDT" finished-at="2020-03-07T18:01:01 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15758" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:44 BDT">
+    <test name="Login Test" duration-ms="20885" started-at="2020-03-07T18:00:40 BDT" finished-at="2020-03-07T18:01:01 BDT">
+      <class name="com.bitm.SeleniumMaven.Test.FlightSelectionTest">
+        <test-method status="PASS" signature="checkFlightSelectionPageTitle()[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightSelectionTest@3cef309d]" name="checkFlightSelectionPageTitle" duration-ms="66" started-at="2020-03-07T18:00:59 BDT" finished-at="2020-03-07T18:00:59 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFlightSelectionPageTitle -->
+        <test-method status="PASS" signature="FlightSelectionTest()[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightSelectionTest@3cef309d]" name="FlightSelectionTest" duration-ms="1626" started-at="2020-03-07T18:00:59 BDT" depends-on-methods="com.bitm.SeleniumMaven.Test.FlightSelectionTest.checkFlightSelectionPageTitle" finished-at="2020-03-07T18:01:01 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightSelectionTest -->
+      </class> <!-- com.bitm.SeleniumMaven.Test.FlightSelectionTest -->
+      <class name="com.bitm.SeleniumMaven.Test.FlightFinderTest">
+        <test-method status="PASS" signature="checkFlightFinderPageTitle()[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightFinderTest@50b494a6]" name="checkFlightFinderPageTitle" duration-ms="547" started-at="2020-03-07T18:00:56 BDT" finished-at="2020-03-07T18:00:57 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFlightFinderPageTitle -->
+        <test-method status="PASS" signature="FindAFlightTest(java.util.List)[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightFinderTest@50b494a6]" name="FindAFlightTest" duration-ms="1735" started-at="2020-03-07T18:00:57 BDT" data-provider="FFdata" depends-on-methods="com.bitm.SeleniumMaven.Test.FlightFinderTest.checkFlightFinderPageTitle" finished-at="2020-03-07T18:00:59 BDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[FlightFinderDTO [passengers=2, departing=London, month=March, day=5, arriving=Sydney, rmonth=August, rday=30, airline=Blue Skies Airlines]]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FindAFlightTest -->
+      </class> <!-- com.bitm.SeleniumMaven.Test.FlightFinderTest -->
       <class name="com.bitm.SeleniumMaven.Test.LoginTest">
-        <test-method status="PASS" signature="checkloginpagetitle()[pri:1, instance:com.bitm.SeleniumMaven.Test.LoginTest@2758fe70]" name="checkloginpagetitle" duration-ms="9042" started-at="2020-03-07T02:03:29 BDT" finished-at="2020-03-07T02:03:38 BDT">
+        <test-method status="PASS" signature="checkloginpagetitle()[pri:0, instance:com.bitm.SeleniumMaven.Test.LoginTest@6e6c3152]" name="checkloginpagetitle" duration-ms="8740" started-at="2020-03-07T18:00:40 BDT" finished-at="2020-03-07T18:00:49 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkloginpagetitle -->
-        <test-method status="PASS" signature="logintest(java.util.List)[pri:0, instance:com.bitm.SeleniumMaven.Test.LoginTest@2758fe70]" name="logintest" duration-ms="5348" started-at="2020-03-07T02:03:39 BDT" data-provider="loginData" depends-on-methods="com.bitm.SeleniumMaven.Test.LoginTest.checkloginpagetitle" finished-at="2020-03-07T02:03:44 BDT">
+        <test-method status="PASS" signature="logintest(java.util.List)[pri:0, instance:com.bitm.SeleniumMaven.Test.LoginTest@6e6c3152]" name="logintest" duration-ms="6513" started-at="2020-03-07T18:00:50 BDT" data-provider="loginData" depends-on-methods="com.bitm.SeleniumMaven.Test.LoginTest.checkloginpagetitle" finished-at="2020-03-07T18:00:56 BDT">
           <params>
             <param index="0">
               <value>
@@ -23,6 +50,65 @@
           </reporter-output>
         </test-method> <!-- logintest -->
       </class> <!-- com.bitm.SeleniumMaven.Test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.bitm.SeleniumMaven.Test.FlightBookingTest">
+        <test-method status="PASS" signature="checkFlightBookingPageTitle()[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightBookingTest@32709393]" name="checkFlightBookingPageTitle" duration-ms="86" started-at="2020-03-07T18:01:01 BDT" finished-at="2020-03-07T18:01:01 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFlightBookingPageTitle -->
+        <test-method status="SKIP" signature="FlightbookingTest(java.util.List)[pri:0, instance:com.bitm.SeleniumMaven.Test.FlightBookingTest@32709393]" name="FlightbookingTest" duration-ms="0" started-at="2020-03-07T18:01:01 BDT" data-provider="FBdata" depends-on-methods="com.bitm.SeleniumMaven.Test.FlightBookingTest.checkFlightBookingPageTitle" finished-at="2020-03-07T18:01:01 BDT">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:50)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:146)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:820)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:762)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:60)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:39)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:771)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:1035)
+at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:390)
+at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:342)
+at com.bitm.SeleniumMaven.Utils.ExcelUtils.getFlightBookingData(ExcelUtils.java:195)
+at com.bitm.SeleniumMaven.DataProvider.FlightBookingDataProvider.getFlightBookingData(FlightBookingDataProvider.java:17)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:77)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:46)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightbookingTest -->
+      </class> <!-- com.bitm.SeleniumMaven.Test.FlightBookingTest -->
+    </test> <!-- Login Test -->
+  </suite> <!-- SeleniumMavenSuite -->
 </testng-results>

@@ -62,6 +62,7 @@ public class XPathUtils {
 	    	public static final String DELSTATE_SLOT= "/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[18]/td[2]/input[1]";
 	    	public static final String DELPOST_SLOT= "/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[18]/td[2]/input[2]";
 	    	public static final String DELCOUNTRY_SLOT= "/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[19]/td[2]/select";
+	    	public static final String SECUREPURCHASE_BTN= "/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[23]/td/input";
 	    	
 	    	
 	    }

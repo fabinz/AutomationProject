@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SeleniumMavenSuite]">
-  <test thread-count="5" name="DriverManagerTest(failed)">
+  <test thread-count="5" name="Login Test(failed)">
     <classes>
-      <class name="com.bitm.SeleniumMaven.Test.LoginTest">
+      <class name="com.bitm.SeleniumMaven.Test.FlightBookingTest">
         <methods>
-          <include name="loginTest"/>
-          <include name="checkloginpagetitle"/>
+          <include name="FlightbookingTest"/>
+          <include name="checkFlightBookingPageTitle"/>
         </methods>
-      </class> <!-- com.bitm.SeleniumMaven.Test.LoginTest -->
+      </class> <!-- com.bitm.SeleniumMaven.Test.FlightBookingTest -->
     </classes>
-  </test> <!-- DriverManagerTest(failed) -->
+  </test> <!-- Login Test(failed) -->
 </suite> <!-- Failed suite [SeleniumMavenSuite] -->

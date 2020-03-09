@@ -14,9 +14,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.bitm.SeleniumMaven.DTO.FlightBookingDTO;
+import com.bitm.SeleniumMaven.DTO.Address;
+import com.bitm.SeleniumMaven.DTO.CreditCard;
 import com.bitm.SeleniumMaven.DTO.FlightFinderDTO;
 import com.bitm.SeleniumMaven.DTO.LoginDTO;
+import com.bitm.SeleniumMaven.DTO.Passengers;
 
 	public class ExcelUtils {
 		
@@ -125,111 +127,113 @@ import com.bitm.SeleniumMaven.DTO.LoginDTO;
 		
 		
 		
-		public static List<FlightBookingDTO> getFlightBookingData() throws IOException {
-			List<FlightBookingDTO> FBdata = new ArrayList<FlightBookingDTO>();
+		public static List<Passengers> getFlightBookingData() throws IOException {
+			List<Passengers> FBdata = new ArrayList<Passengers>();
 			DataFormatter formatter = new DataFormatter();
 			// login is the first sheet in excel so getSheet parameter set to 0
 			Iterator<Row> iterator = ExcelUtils.getSheet(2).iterator();
 			while (iterator.hasNext()) {
 				Row nextRow = iterator.next();
 				Iterator<Cell> cellIterator = nextRow.cellIterator();
-				FlightBookingDTO fbooking = new FlightBookingDTO();
+				
+				Passengers passenger=new Passengers();
+				CreditCard card=new CreditCard();
+	            Address deliveryAddress=new Address();
+	            Address billingAddress=new Address();
+				
 				byte cellCounter = 0;
 				while (cellIterator.hasNext()) {
 					Cell cell = cellIterator.next();
 					switch (cellCounter) {
 					case 0:
-						fbooking.setFname(formatter.formatCellValue(cell));
+						passenger.setFirstName(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 1:
-						fbooking.setLname(formatter.formatCellValue(cell));
+						passenger.setLastName(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 2:
-						fbooking.setMeal(formatter.formatCellValue(cell));
 						cellCounter++;
 						break;
 					case 3:
-						fbooking.setCcard(formatter.formatCellValue(cell));
 						cellCounter++;
 						break;
+					
 					case 4:
-						fbooking.setNumber(formatter.formatCellValue(cell));
+						card.setNumber(String.valueOf(cell.getNumericCellValue()));
 						cellCounter++;
 						break;
 					case 5:
-						fbooking.setEdate(formatter.formatCellValue(cell));
 						cellCounter++;
 						break;
 					case 6:
-						fbooking.setEyear(formatter.formatCellValue(cell));
 						cellCounter++;
 						break;
+					
 					case 7:
-						fbooking.setFrstname(formatter.formatCellValue(cell));
+						card.setFirstName(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 8:
-						fbooking.setMidname(formatter.formatCellValue(cell));
+						card.setMiddleName(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 9:
-						fbooking.setLastname(formatter.formatCellValue(cell));
+						card.setLastName(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 10:
-						fbooking.setBilladd(formatter.formatCellValue(cell));
+						billingAddress.setAddress(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 11:
-						fbooking.setCity(formatter.formatCellValue(cell));
+						billingAddress.setCity(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 12:
-						fbooking.setState(formatter.formatCellValue(cell));
+						billingAddress.setState(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 13:
-						fbooking.setPostalcode(formatter.formatCellValue(cell));
+						billingAddress.setPostalCode(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 14:
-						fbooking.setCountry(formatter.formatCellValue(cell));
 						cellCounter++;
 						break;
 					case 15:
-						fbooking.setDeladd(formatter.formatCellValue(cell));
+						deliveryAddress.setAddress(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 16:
-						fbooking.setDelcity(formatter.formatCellValue(cell));
+						deliveryAddress.setCity(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 17:
-						fbooking.setDelstate(formatter.formatCellValue(cell));
+						deliveryAddress.setState(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 18:
-						fbooking.setDelpost(formatter.formatCellValue(cell));
+						deliveryAddress.setPostalCode(cell.getStringCellValue());
 						cellCounter++;
 						break;
 					case 19:
-						fbooking.setDelcountry(formatter.formatCellValue(cell));
-						
+						cellCounter++;
 						break;
-					case 20:
-						fbooking.setDelcity(formatter.formatCellValue(cell));
-						break;
-						
 					default:
 						break;
-					}
-
-				}
-				FBdata.add(fbooking);
-			}
-			close();
+					}               
+	                 
+	            }
+						
+					
+				passenger.setCard(card);
+	            passenger.setBillingAddress(billingAddress);
+	            passenger.setDeliveryAddress(deliveryAddress);
+	            FBdata.add(passenger);
+	        }
+	        close();
 			return FBdata;
 		}
 
@@ -241,4 +245,5 @@ import com.bitm.SeleniumMaven.DTO.LoginDTO;
 		
 	
 	}
+	
 

@@ -20,12 +20,11 @@ import com.bitm.SeleniumMaven.Utils.DriverManager;
 import com.bitm.SeleniumMaven.Utils.UrlTextUtils;
 import com.bitm.SeleniumMaven.Utils.XPathUtils;
 
-@Test()
 public class FlightFinderTest {
 
 	private WebDriver driver = null;
-	
-   
+
+	@Test
 	public void checkFlightFinderPageTitle() {
 		driver = DriverManager.driver;
 
@@ -37,44 +36,43 @@ public class FlightFinderTest {
 
 	}
 
-	@Test(dependsOnMethods = "checkFlightFinderPageTitle" , dataProvider = "FFdata", dataProviderClass = FlightFinderDataProvider.class)
+	@Test(dependsOnMethods = "checkFlightFinderPageTitle", dataProvider = "FFdata", dataProviderClass = FlightFinderDataProvider.class)
 	public void FindAFlightTest(List<FlightFinderDTO> FFData) {
-		 for (FlightFinderDTO FFinder : FFData) {
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.OneWay_BTN)).click();
+		for (FlightFinderDTO FFinder : FFData) {
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.OneWay_BTN)).click();
 
-		
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Passengers_BTN)).sendKeys(FFinder.getPassengers());
-		//passengers.selectByVisibleText("2 ");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Passengers_BTN)).sendKeys(FFinder.getPassengers());
+			// passengers.selectByVisibleText("2 ");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Depart_BTN)).sendKeys(FFinder.getDeparting());
-		//depart.selectByVisibleText("San Francisco");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Depart_BTN)).sendKeys(FFinder.getDeparting());
+			// depart.selectByVisibleText("San Francisco");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Month_BTN)).sendKeys(FFinder.getMonth());
-		//month.selectByVisibleText("May");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Month_BTN)).sendKeys(FFinder.getMonth());
+			// month.selectByVisibleText("May");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Day_BTN)).sendKeys(FFinder.getDay());
-		//day.selectByVisibleText("2");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Day_BTN)).sendKeys(FFinder.getDay());
+			// day.selectByVisibleText("2");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Arrive_BTN)).sendKeys(FFinder.getArriving());
-		//arrive.selectByVisibleText("Paris");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Arrive_BTN)).sendKeys(FFinder.getArriving());
+			// arrive.selectByVisibleText("Paris");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Return_BTN)).sendKeys(FFinder.getRmonth());
-		//returns.selectByVisibleText("August");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Return_BTN)).sendKeys(FFinder.getRmonth());
+			// returns.selectByVisibleText("August");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.RtDay_BTN)).sendKeys(FFinder.getRday());
-		//rtDay.selectByVisibleText("21");
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.RtDay_BTN)).sendKeys(FFinder.getRday());
+			// rtDay.selectByVisibleText("21");
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Service_BTN)).click();
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Service_BTN)).click();
 
-	    driver.findElement(By.xpath(XPathUtils.FlightFinder.Airline_BTN)).sendKeys(FFinder.getAirline());
-		//airline.selectByVisibleText("Blue Skies Airlines"); s
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Airline_BTN)).sendKeys(FFinder.getAirline());
+			// airline.selectByVisibleText("Blue Skies Airlines"); s
 
-		driver.findElement(By.xpath(XPathUtils.FlightFinder.Cont_BTN)).click();
+			driver.findElement(By.xpath(XPathUtils.FlightFinder.Cont_BTN)).click();
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		System.out.println("Flight Founded Successfully");
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			System.out.println("Flight Founded Successfully");
+
+		}
 
 	}
-
-}
 }
